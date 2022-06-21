@@ -3,7 +3,12 @@ kind: Deployment
 metadata:
   name: my-python-deployment
 spec:
-  replicas: 2
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1  # take down 1 pod at a time
+      maxSurge: 2        # bring one at a time
   selector:
     matchLabels:
       app: my-python-app
