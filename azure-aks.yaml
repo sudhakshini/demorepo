@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: mypythondockerrepo
-        image: acrdemo29.azurecr.io/madhu29/demorepo
+        image: acrdemo29.azurecr.io/madhu29/demorepo:48
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
