@@ -21,6 +21,7 @@ spec:
       containers:
       - name: mypythondockerrepo
         image: acrdemo29.azurecr.io/madhu29/demorepo
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
 # service type loadbalancer       
