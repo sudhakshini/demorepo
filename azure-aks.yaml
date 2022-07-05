@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-python-deployment
 spec:
-  replicas: 10
+  replicas: 5
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: mypythondockerrepo
-        image: acrdemo29.azurecr.io/madhu29/demorepo:48
+        image: sudhaacr.azurecr.io/sudhakshini/demorepo:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
